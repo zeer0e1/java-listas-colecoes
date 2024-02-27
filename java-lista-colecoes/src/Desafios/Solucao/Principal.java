@@ -2,7 +2,7 @@ package Desafios.Solucao;
 
 import Desafios.Classes.*;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class Principal {
     public static void main(String[] args) {
@@ -123,9 +123,51 @@ public class Principal {
 
         System.out.println(thanAccountValue.getNumberAccount());
 
+        List<Integer> listaNumero = new ArrayList<>();
+        Random random = new Random();
+
+        for (int i = 0; i < 11; i++) {
+            listaNumero.add(random.nextInt(10));
+        }
+        System.out.println("Antes de ordenar: ");
+        System.out.println(listaNumero);
+        System.out.println("Depois de ordenar:");
+        Collections.sort(listaNumero);
+        System.out.println(listaNumero);
+
+        List<Titulo> titulos = new ArrayList<>();
+        var tit1 = new Titulo("Lucas");
+        var tit2 = new Titulo("Rauana");
+        var tit3 = new Titulo("Skye");
+
+        titulos.add(tit1);
+        titulos.add(tit2);
+        titulos.add(tit3);
+        System.out.println("Antes de ordernar: ");
+        System.out.println(titulos);
+        Collections.sort(titulos);
+        System.out.println("Depois de orderndar: ");
+        System.out.println(titulos);
+
+
+
+
+        List<String> listaPolimorfica;
+
+        listaPolimorfica = new ArrayList<>();
+        listaPolimorfica.add("Elemento 1");
+        listaPolimorfica.add("Elemento 2");
+        System.out.println("ArrayList: " + listaPolimorfica);
+
+        listaPolimorfica = new LinkedList<>();
+        listaPolimorfica.add("Elemento A");
+        listaPolimorfica.add("Elemento B");
+        System.out.println("LinkedList: " + listaPolimorfica);
+
+}
 
 
     }
 
 
-}
+
