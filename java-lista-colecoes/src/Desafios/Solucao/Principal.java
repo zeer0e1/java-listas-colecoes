@@ -55,6 +55,20 @@ public class Principal {
         ProdutoPerecivel prod1 = new ProdutoPerecivel("Arroz",39.00,"2023");
         System.out.println(prod1);
 
+        ArrayList<String> strings = new ArrayList<>();
+        String nome1 = "Lucas";
+        String nome2 = "Rauana";
+        String nome3 = "Sky";
+
+        strings.add(nome1);
+        strings.add(nome2);
+        strings.add(nome3);
+
+        for (String string: strings){
+            System.out.println(string);
+        }
+
+
     }
 
 
