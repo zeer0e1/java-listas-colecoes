@@ -1,8 +1,6 @@
 package Desafios.Solucao;
 
-import Desafios.Classes.Pessoa;
-import Desafios.Classes.Produto;
-import Desafios.Classes.ProdutoPerecivel;
+import Desafios.Classes.*;
 
 import java.util.ArrayList;
 
@@ -67,6 +65,64 @@ public class Principal {
         for (String string: strings){
             System.out.println(string);
         }
+
+        Cachorro cachorro = new Cachorro();
+        Animal animal = (Animal) cachorro;
+
+        Produto2 pd1 = new Produto2("Feijão",28.0);
+        Produto2 pd2 = new Produto2("Macarrão",23.0);
+        Produto2 pd3 = new Produto2("Sal",14.0);
+
+        ArrayList<Produto2> listaCompras = new ArrayList<>();
+
+        listaCompras.add(pd1);
+        listaCompras.add(pd2);
+        listaCompras.add(pd3);
+
+        double soma = 0;
+
+        for (Produto2 produto:listaCompras) {
+            soma += produto.getPreco();
+        }
+
+        double media = soma / listaCompras.size();
+        System.out.printf("A media dos produtos é: %.2f",media);
+        System.out.println();
+        System.out.println("---------");
+
+        Circulo c1 = new Circulo();
+
+        c1.setArea(30);
+        Quadrado q1 =new Quadrado(5);
+
+        ArrayList<Forma> lis1 = new ArrayList<>();
+        lis1.add(c1);
+        lis1.add(q1);
+
+        for(Forma item: lis1){
+            System.out.printf("%.2f%n",item.calcularArea());
+        }
+
+        System.out.println("------------");
+        ArrayList<ContaBancaria> contas = new ArrayList<>();
+        ContaBancaria cont1 = new ContaBancaria(1234,100);
+        ContaBancaria cont2 = new ContaBancaria(456,500);
+        ContaBancaria cont3 = new ContaBancaria(7899,300);
+
+        contas.add(cont1);
+        contas.add(cont2);
+        contas.add(cont3);
+
+        ContaBancaria thanAccountValue = contas.get(0);
+
+        for (ContaBancaria account: contas){
+            if(account.getSalt() > thanAccountValue.getSalt()){
+                thanAccountValue = account;
+            }
+        }
+
+        System.out.println(thanAccountValue.getNumberAccount());
+
 
 
     }
